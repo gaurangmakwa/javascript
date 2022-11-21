@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <p id ="demo">hello world</p>
+        <button onclick="myfunction()">click me!!</button>
+
+        <form>
+            enter no:<input type="number" name="n1"/><br/>
+            <input type="button" value="cube" onClick="getcube()"/>
+        </form>
+        <form>
+            enter value:<input type="text" /><br/>
+            <input type="button" value="click me" onclick="count()"/>
+        </form>
+
+        <p class="demo">hello world</p>
+        <p class="demo">hello world</p>
+        <button onclick="show()">click me!</button>
+
+        <form name="frm" onsubmit="validateform()">
+            enter name:<input type="text" name="myname"></br></br>
+            <input type="submit" value="submit data">
+        </form>
+        <script>
+            function myfunction(){
+                var x = document.getElementById("demo");
+                x.style.color= "red";
+            }
+            function getcube(){
+                var number =document.getElementsByName("n1")[0].value;
+                alert(number * number * number);
+            }
+            function count(){
+                var x =document.getElementsByTagName("input");
+                alert("input tags are :"+x.length);
+            }
+            function show(){
+                var x =document.getElementsByClassName("demo")
+                x[0].style.color="red";
+            }
+            function validateform(){
+                var myname=frm.myname.value;
+                if(myname==null|| myname==""){
+                    alert("enter name");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <form name="frm" onsubmit="add()">
+            enter mobile no:<input type="text" name="mno"></br></br>
+            <input type="submit" value="submit data">
+        </form>
+
+        <script>
+             function add(){
+                var mno = document.frm.mno.value;
+                if(mno ==""){
+                    alert("enter mobile no");
+                    return false;
+                }
+                else if(isNaN(mno)){
+                    alert("enter digits only");
+                    return false;
+                }
+                
+            }
+        </script>
+
+    </body>
+</html>
